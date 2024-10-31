@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+#topSection {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    border-bottom: 10px solid #00ffcc;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
+    overflow: hidden;
+}
+
+#pointCloud {
+    flex: 1;
+    background: linear-gradient(135deg, #000428, #004e92);
+    border-right: 10px solid #00ffcc;
+    position: relative;
+    overflow: hidden;
+}
+
+#responseBox {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-left: 10px solid #00ffcc;
+    box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+#userInput {
+    width: 100%;
+    padding: 15px;
+    border-top: 10px solid #00ffcc;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #e0e0e0;
+    box-shadow: 0 -4px 10px rgba(0, 255, 204, 0.3);
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+#userInput:focus {
+    background-color: #444;
+}
+
+#pointCloud::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.2), transparent);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+} 
